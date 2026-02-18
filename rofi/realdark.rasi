@@ -1,0 +1,84 @@
+* {
+    font:                   "JetbrainsMono 11";
+    
+    background:             #000000;
+    background-alt:         #111111;
+    foreground:             #e5e5e5;
+    selected:               #111111;
+    border-col:             #444444;
+    
+    background-color:       @background;
+    text-color:             @foreground;
+    margin:                 0px;
+    padding:                0px;
+}
+
+window {
+    transparency:           "real";
+    location:               center;
+    anchor:                 center;
+    fullscreen:             false;
+    width:                  500px;
+    border:                 1px;
+    border-color:           @border-col;
+    cursor:                 "default";
+}
+
+mainbox {
+    spacing:                0px;
+    children:               [ inputbar, listview ];
+}
+
+inputbar {
+    spacing:                0px;
+    padding:                10px;
+    background-color:       @background-alt;
+    children:               [ prompt, entry ];
+}
+
+prompt {
+    spacing:                0;
+    padding:                0 10px 0 0;
+    text-color:             @foreground;
+    background-color:       inherit;
+}
+
+entry {
+    spacing:                0;
+    text-color:             @foreground;
+    background-color:       inherit;
+    placeholder:            "Search...";
+    placeholder-color:      #666666;
+    cursor:                 text;
+}
+
+listview {
+    lines:                  10;
+    columns:                1;
+    fixed-height:           false;
+    scrollbar:              false;
+    spacing:                2px;
+    padding:                5px;
+}
+
+element {
+    padding:                8px;
+    cursor:                 pointer;
+    border:                 0;
+}
+
+element normal.normal {
+    background-color:       @background;
+    text-color:             @foreground;
+}
+
+element selected.normal {
+    background-color:       @selected;
+    text-color:             #ffffff;
+}
+
+element alternate.normal {
+    background-color:       @background;
+    text-color:             @foreground;
+}
+
