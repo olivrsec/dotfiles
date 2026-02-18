@@ -23,9 +23,6 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-# picom
-exec --no-startup-id picom --backend glx --vsync
-
 # apps on startup
 exec_always --no-startup-id dex -a
 
