@@ -1,0 +1,48 @@
+# ~/.config/i3status/config
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 5
+}
+
+order += "cpu_temperature 0"
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "wireless wlp0s20f3"
+order += "battery 0"
+order += "tztime local"
+
+cpu_temperature 0 {
+    format = " %degrees°C"
+}
+
+cpu_usage {
+    format = " %usage"
+}
+
+memory {
+    format = " %used / %total"
+}
+
+disk "/" {
+    format = " %avail"
+}
+
+wireless wlp0s20f3 {
+    format_up = " %quality"
+    format_down = "睊"
+}
+
+battery 0 {
+    format = " %percentage "
+    
+    path = "/sys/class/power_supply/BAT1/uevent"
+    
+    format_down = "NO BAT"
+}
+
+tztime local {
+    format = " %Y-%m-%d %H:%M"
+}
+
