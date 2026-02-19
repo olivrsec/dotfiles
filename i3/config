@@ -93,7 +93,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec i3-sensible-terminal
 
 # printscreen
-bindsym Print exec sh -c "xfce4-screenshooter -r -s /tmp/screenshot.png && cat /tmp/screenshot.png | xclip -selection clipboard -t image/png"
+bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 
 # open firefox
 bindsym $mod+w exec firefox
